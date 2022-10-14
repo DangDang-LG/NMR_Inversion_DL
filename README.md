@@ -1,4 +1,4 @@
-Code from "A study on multi-exponential inversion of nuclear magnetic resonance relaxation data with deep learning"
+Code from "A study on multi-exponential inversion of nuclear magnetic resonance relaxation data using deep learning"
 =======================================================================================================================
 This project is under review.
 The key programs containing NMR forward simulation process and neural network structure will be published first. 
