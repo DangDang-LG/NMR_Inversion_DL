@@ -5,8 +5,9 @@ from config import generated_pure_echo_path, generated_echo_noise_path, generate
 from config import model_path
 from network import nmr_inversion_model_fcn, nmr_inversion_model_cnn, nmr_inversion_model_cnn_attention, nmr_inversion_model_en_deocde
 from train import training, predict
-
+from makedir import makedir
 if __name__ == '__main__':
+    makedir()
     data_generated(T2_number, SNR, generated_pure_echo_path, generated_echo_noise_path, generated_T2_AMPLITUDE_path)
     data_merge(SNR, generated_pure_echo_path, generated_echo_noise_path, generated_T2_AMPLITUDE_path, save_pure_echo_path, save_echo_noise_path, save_T2_AMPLITUDE_path)
     training(SNR, nmr_inversion_model_fcn, save_echo_noise_path, save_pure_echo_path, save_T2_AMPLITUDE_path)
