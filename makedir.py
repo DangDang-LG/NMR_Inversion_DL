@@ -14,3 +14,4 @@ def makedir():
         os.makedirs(generated_echo_noise_path)
     if os.path.exists(generated_T2_AMPLITUDE_path) == False:
         os.makedirs(generated_T2_AMPLITUDE_path)
+    return "make dir finish"
