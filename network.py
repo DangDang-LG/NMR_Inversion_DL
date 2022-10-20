@@ -32,7 +32,7 @@ def attention(att_dim,inputs,name):
 
 
 def nmr_inversion_model_fcn():
-    # 编码器解码器结构
+
     input_shape_echo = (1, 2500)
     input_shape_T2 = (1, 128)
 
@@ -58,13 +58,11 @@ def nmr_inversion_model_fcn():
 
 def nmr_inversion_model_en_deocde():
 
-    # 编码器解码器结构
     input_shape_echo = (1, 2500)
     input_shape_T2 = (1, 128)
 
     echo_noise = Input(shape=input_shape_echo)
     T2_AMPLITUDE = Input(shape=input_shape_T2)
-
     encoder = Dense(units=1024, name="encoder")(echo_noise)
     pure_echo = Dense(units=2500, name="pure_echo")(encoder)
     x = Dense(units=1024, activation='relu')(pure_echo)
@@ -86,7 +84,6 @@ def nmr_inversion_model_en_deocde():
 
 def nmr_inversion_model_cnn():
 
-    # 编码器解码器结构
     input_shape_echo = (1, 2500)
     input_shape_T2 = (1, 128)
 
@@ -118,7 +115,7 @@ def nmr_inversion_model_cnn():
 
 
 def nmr_inversion_model_cnn_attention():
-    # 编码器解码器结构
+
     input_shape_echo = (1, 2500)
     input_shape_T2 = (1, 128)
 
